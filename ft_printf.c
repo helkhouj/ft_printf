@@ -12,7 +12,7 @@ int ft_printf(const char *format, ...)
         if (format[i] == '%' && format[i + 1])
             count += process_format(format, args, &i);
         else
-            count += ft_putchar_fd(format[i], 1);
+            count += ft_putchar(format[i]);
         i++;
     }
     va_end(args);

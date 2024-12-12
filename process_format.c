@@ -20,7 +20,7 @@ int process_format(const char *format, va_list args, int *i)
     else if (format[*i] == 'p')
         count += handle_pointer(args);
     else if (format[*i] == '%')
-        count += ft_putchar_fd('%', 1);
+        count += ft_putchar('%');
 
     return count;
 }
