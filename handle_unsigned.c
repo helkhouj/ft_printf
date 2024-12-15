@@ -12,10 +12,13 @@
 
 #include "ft_printf.h"
 
-int handle_unsigned(va_list args)
+int	handle_unsigned(va_list args)
 {
-    char *str = ft_itoa_base(va_arg(args, unsigned int), 10, 0);
-    int len = ft_putstr(str);
-    free(str);
-    return (len);
+	char	*str;
+	int		len;
+
+	str = ft_itoa_base(va_arg(args, unsigned int), 10, 0);
+	len = ft_putstr(str);
+	free(str);
+	return (len);
 }
