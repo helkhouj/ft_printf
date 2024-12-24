@@ -6,15 +6,14 @@
 #    By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/24 17:02:18 by helkhouj          #+#    #+#              #
-#    Updated: 2024/12/24 17:04:15 by helkhouj         ###   ########.fr        #
+#    Updated: 2024/12/24 17:06:38 by helkhouj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_printf.c ft_itoa_base.c ft_putchar.c ft_putstr.c ft_putnbr.c handle_char.c handle_hex.c /
-		handle_int.c handle_ptr.c handle_str.c handle_unsigned.c process_format.c /
+SRC = ft_printf.c ft_itoa_base.c ft_putchar.c ft_putstr.c ft_putnbr.c handle_char.c handle_hex.c handle_int.c handle_ptr.c handle_str.c handle_unsigned.c process_format.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

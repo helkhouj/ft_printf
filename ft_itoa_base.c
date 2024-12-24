@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 09:25:38 by helkhouj          #+#    #+#             */
-/*   Updated: 2024/12/24 16:58:27 by helkhouj         ###   ########.fr       */
+/*   Updated: 2024/12/24 17:07:25 by helkhouj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int ft_itoa_base(unsigned long num, int base, int uppercase)
 {
     char *digits;
-    char buffer[65]; 
+    char buffer[65];
     int i = 64;
 
     if (uppercase)
