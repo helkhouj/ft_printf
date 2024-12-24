@@ -12,10 +12,13 @@
 
 #include "ft_printf.h"
 
-int handle_pointer(va_list args)
+int	handle_pointer(va_list args)
 {
-    unsigned long num = (unsigned long)va_arg(args, void *);
-    int len = ft_putstr("0x");
-    len = len + ft_itoa_base(num, 16, 0);
-    return len;
+	unsigned long	num;
+	int				len;
+
+	num = (unsigned long)va_arg(args, void *);
+	len = ft_putstr("0x");
+	len = len + ft_itoa_base(num, 16, 0);
+	return (len);
 }

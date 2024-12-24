@@ -12,9 +12,10 @@
 
 #include "ft_printf.h"
 
-int handle_hex(va_list args, int uppercase)
+int	handle_hex(va_list args, int uppercase)
 {
-    unsigned int num = va_arg(args, unsigned int);
-    return (ft_itoa_base(num, 16, uppercase));
-}
+	unsigned int	num;
 
+	num = va_arg(args, unsigned int);
+	return (ft_itoa_base(num, 16, uppercase));
+}

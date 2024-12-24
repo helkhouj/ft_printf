@@ -12,8 +12,7 @@
 
 #include "ft_printf.h"
 
-int handle_integer(va_list args)
+int	handle_integer(va_list args)
 {
-    return (ft_putnbr(va_arg(args, int)));
+	return (ft_putnbr(va_arg(args, int)));
 }
-

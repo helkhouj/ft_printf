@@ -12,33 +12,27 @@
 
 #include "ft_printf.h"
 
-#include "ft_printf.h"
-
-int ft_itoa_base(unsigned long num, int base, int uppercase)
+int	ft_itoa_base(unsigned long num, int base, int uppercase)
 {
-    char *digits;
-    char buffer[65];
-    int i = 64;
+	char	*digits;
+	char	buffer[65];
+	int		i;
 
-    if (uppercase)
-        digits = "0123456789ABCDEF";
-    else
-        digits = "0123456789abcdef";
-
-    buffer[i--] = '\0';
-    if (num == 0)
-    {
-        buffer[i] = '0';
-        return (ft_putstr(&buffer[i]));
-    }
-
-    while (num > 0)
-    {
-        buffer[i--] = digits[num % base];
-        num /= base;
-    }
-
-    return (ft_putstr(&buffer[i + 1]));
+	i = 64;
+	if (uppercase)
+		digits = "0123456789ABCDEF";
+	else
+		digits = "0123456789abcdef";
+	buffer[i--] = '\0';
+	if (num == 0)
+	{
+		buffer[i] = '0';
+		return (ft_putstr(&buffer[i]));
+	}
+	while (num > 0)
+	{
+		buffer[i--] = digits[num % base];
+		num /= base;
+	}
+	return (ft_putstr(&buffer[i + 1]));
 }
-
-

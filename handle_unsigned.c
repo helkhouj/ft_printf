@@ -12,9 +12,10 @@
 
 #include "ft_printf.h"
 
-int handle_unsigned(va_list args)
+int	handle_unsigned(va_list args)
 {
-    unsigned int num = va_arg(args, unsigned int);
-    return (ft_itoa_base(num, 10, 0));
-}
+	unsigned int	num;
 
+	num = va_arg(args, unsigned int);
+	return (ft_itoa_base(num, 10, 0));
+}

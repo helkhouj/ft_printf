@@ -21,4 +21,3 @@ int	handle_string(va_list args)
 		return (ft_putstr("(null)"));
 	return (ft_putstr(str));
 }
-
