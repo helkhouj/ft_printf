@@ -6,7 +6,7 @@
 /*   By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 09:25:32 by helkhouj          #+#    #+#             */
-/*   Updated: 2024/12/24 16:58:00 by helkhouj         ###   ########.fr       */
+/*   Updated: 2024/12/24 21:24:11 by helkhouj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_printf(const char *format, ...)
 
 	count = 0;
 	i = 0;
+	if (!format)
+		return (-1);
 	va_start(args, format);
 	while (format[i])
 	{

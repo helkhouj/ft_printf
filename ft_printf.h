@@ -6,7 +6,7 @@
 /*   By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 09:25:28 by helkhouj          #+#    #+#             */
-/*   Updated: 2024/12/24 17:00:46 by helkhouj         ###   ########.fr       */
+/*   Updated: 2024/12/24 21:32:10 by helkhouj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	handle_pointer(va_list args);
 int	handle_hex(va_list args, int uppercase);
 int	handle_integer(va_list args);
 int	handle_unsigned(va_list args);
+int	handle_specifier(const char specifier, va_list args);
 
 int	ft_printf(const char *format, ...);
 int	ft_itoa_base(unsigned long num, int base, int uppercase);
