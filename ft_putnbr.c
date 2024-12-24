@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/14 09:25:13 by helkhouj          #+#    #+#             */
-/*   Updated: 2024/12/14 09:25:14 by helkhouj         ###   ########.fr       */
+/*   Created: 2024/12/24 16:47:26 by helkhouj          #+#    #+#             */
+/*   Updated: 2024/12/24 16:47:46 by helkhouj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_strdup(const char *s)
+int ft_putnbr(int n)
 {
-	size_t	len;
-	char	*dup;
-	size_t	i;
+    int count = 0;
 
-	len = ft_strlen(s);
-	dup = (char *)malloc((len + 1) * sizeof(char));
-	if (!dup)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
+    if (n == -2147483648)
+        return (ft_putstr("-2147483648"));
+    if (n < 0)
+    {
+        count += ft_putchar('-');
+        n = -n;
+    }
+    if (n >= 10)
+        count += ft_putnbr(n / 10);
+    count += ft_putchar((n % 10) + '0');
+    return count;
 }
