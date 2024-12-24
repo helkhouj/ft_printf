@@ -6,7 +6,7 @@
 /*   By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 09:25:08 by helkhouj          #+#    #+#             */
-/*   Updated: 2024/12/14 09:25:09 by helkhouj         ###   ########.fr       */
+/*   Updated: 2024/12/24 16:56:15 by helkhouj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,4 @@ int	handle_char(va_list args)
 {
 	return (ft_putchar(va_arg(args, int)));
 }
+

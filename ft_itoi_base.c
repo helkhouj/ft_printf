@@ -6,16 +6,18 @@
 /*   By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 09:25:38 by helkhouj          #+#    #+#             */
-/*   Updated: 2024/12/24 16:51:35 by helkhouj         ###   ########.fr       */
+/*   Updated: 2024/12/24 16:58:27 by helkhouj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 #include "ft_printf.h"
 
 int ft_itoa_base(unsigned long num, int base, int uppercase)
 {
     char *digits;
-    char buffer[65];
+    char buffer[65]; 
     int i = 64;
 
     if (uppercase)
@@ -38,4 +40,5 @@ int ft_itoa_base(unsigned long num, int base, int uppercase)
 
     return (ft_putstr(&buffer[i + 1]));
 }
+
 

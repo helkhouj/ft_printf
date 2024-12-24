@@ -6,13 +6,13 @@
 /*   By: helkhouj <helkhouj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 09:25:25 by helkhouj          #+#    #+#             */
-/*   Updated: 2024/12/14 09:25:26 by helkhouj         ###   ########.fr       */
+/*   Updated: 2024/12/24 16:58:40 by helkhouj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int ft_putchar(char c)
 {
-	return (write(1, &c, 1));
+    return (write(1, &c, 1));
 }
